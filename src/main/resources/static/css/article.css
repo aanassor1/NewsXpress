@@ -1,0 +1,43 @@
+.web-content .article-sect {
+    background-color: #212121;
+    padding: 20px;
+    margin: 20px;
+    margin-right: 40px;
+}
+
+.web-content .date-time {
+	margin-bottom: 25px;
+}
+
+.web-content .content {
+    list-style-type: none;
+    display: block;
+}
+
+.web-content .content p {
+    margin-top: -14px;
+}
+
+.web-content .source {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    float: right;
+}
+
+
+.web-content .prev-button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 110px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-color: #171717;
+    cursor: pointer;
+}
+
+.web-content .prev-button:hover {
+    background-color: #0b0b0b;
+}

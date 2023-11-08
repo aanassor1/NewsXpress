@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  xmlns:th=\"http://www.thymeleaf.org\">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title th:text="|NewsXpress - ${category}|"></title>
+</head>
+<body>
+    <a name="top"></a> <!--Used for scroll up-->
+    <div class="top-bar">
+        <h1 class="newsXpress-logo">News<span class="Xpress">Xpress</span></h1>
+        <ul class="list">
+            <li><a href="/news/">Top Stories</a></li>
+            <li><a href="/news/world">World</a></li>
+            <li><a href="/news/uk">UK</a></li>    
+            <li><a href="/news/business">Business</a></li>    
+            <li><a href="/news/politics">Politics</a></li>    
+            <li><a href="/news/health">Health</a></li>    
+            <li><a href="/news/education">Education & Family</a></li>    
+            <li><a href="/news/science">Science & Environment</a></li>    
+            <li><a href="/news/technology">Technology</a></li>    
+            <li><a href="/news/entertainment">Entertainment & Arts</a></li>   
+        </ul>
+    </div>
+    <div class="web-content">
+        <h2 class="category-title" th:text="${category}">News Category</h2>
+        <p class="last-update-time">Last updated time: <span th:text="${lastUpdatedTime}"></span></p>
+        <div class="article-box">
+            <ul class="list" th:each="article : ${articles}">
+                <li class="item">
+                    <h3 class="title" th:text="${article.getTitle()}">Article Title</h3>
+                    <p class="date-time" th:text="${article.getPublicationDateTime()}">Article Published Date Time</p>
+                    <p class="desc" th:text="${article.getDesc()}">Article Description</p>  
+                    <a class="read-more" th:href="@{|/news/id/${article.getId()}|}">Read more</a>   
+                </li>
+            </ul>
+        </div>
+        <div class="page-number">
+            <ul>
+                <li><a th:if="${currentPage > 1}" th:href="@{|/news/${categoryForURL}/page/${currentPage-1}|}">&lt;</a></li><!--This displays "<" -->    
+                <li><p><span th:text="${currentPage}"></span> / <span th:text="${maxPages}"></span></p></li>
+                <li><a th:if="${currentPage < maxPages}" th:href="@{|/news/${categoryForURL}/page/${currentPage+1}|}">&gt;</a></li><!--This displays ">" -->
+            </ul>        
+        </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <div class="scroll-text">
+                <li><a href="#top">Scroll back up</a></li>
+            </div>
+            <div class="footer-info">
+                <li>Disclaimer: articles taken from the official BBC news website.</li>
+                <li>Website made for educational purposes only.</li>
+                <li id="website-author">Website created by Abdul-Aziz Nassor</li>    
+            </div>
+         </ul>
+    </footer>
+</body>
+</html>

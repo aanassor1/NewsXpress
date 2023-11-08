@@ -1,0 +1,164 @@
+body {
+    font-family: "Quicksand", "Verdana", "Tahoma";
+    background-color: #2e2e2e;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*-----------------TOP BAR-----------------*/
+
+.top-bar {
+    background-color: #212121;
+    overflow: hidden;
+}
+
+.newsXpress-logo {
+    color:white;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.Xpress {
+    color: red;
+}
+
+.top-bar ul {
+    list-style: none;
+    margin: 0px;
+    text-align: center;
+}
+
+.top-bar li {
+    display: inline-block;
+    padding: 10px 0px;
+}
+
+.top-bar li a {
+    background-color: #212121;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+
+.top-bar li a:hover {
+    background-color: #171717;
+}
+
+/*-----------------CONTENT SECTION-----------------*/
+.web-content {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.category-title {
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.last-update-time {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/*Article List*/
+.web-content .list {
+    list-style: none;
+}
+
+.web-content .item {
+    background-color: #212121;
+    padding: 15px;
+    margin-left: -20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.web-content .title {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.web-content .date-time {
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.web-content .desc {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.web-content .read-more {
+    margin-top: 20px;
+    padding: 10px;
+    width: 110px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-color: #171717;
+}
+
+.web-content .read-more:hover {
+    background-color: #0b0b0b;
+}
+/*end of article list*/
+
+.page-number {
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+.page-number ul {
+    list-style: none;
+}
+
+.page-number ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.page-number ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.page-number ul a:hover {
+    color: grey;
+}
+
+/*-----------------FOOTER SECTION-----------------*/
+.footer {
+    background-color: #212121;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer .scroll-text {
+    text-align: center;
+}
+.footer .scroll-text a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .scroll-text a:hover {
+    color: grey;
+}
+
+.footer .footer-info {
+    text-align: right;
+    font-size: 9px;
+    color: grey;
+    padding-right: 15px;
+}
